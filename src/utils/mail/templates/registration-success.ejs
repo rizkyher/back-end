@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herdians - Activation User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #dddddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: #4caf50;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: #f1f1f1;
+      color: #555555;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Selamat Datang</h1>
+    </div>
+    <div class="content">
+      <p>Halo <%= username %>,</p>
+      <p>Terima kasih telah mendaftar di website kami. Berikut adalah informasi akun Anda:</p>
+      <ul>
+        <li><strong>Nama:</strong> <%= fullname %></li>
+        <li><strong>Email:</strong> <%= email %></li>
+        <li><strong>Tanggal Pendaftaran:</strong> <%= createdAt %></li>
+      </ul>
+      <p>Untuk memulai, silakan klik tombol di bawah ini:</p>
+      <a href="<%= activationLink %>" class="button">Aktifkan Akun</a>
+      <p>Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami.</p>
+      <p>Salam hangat, <br> Herdians</p>
+    </div>
+    <div class="footer">
+      <p>&copy; 2025 Herdians Event Management System. Semua Hak Dilindungi.</p>
+    </div>
+  </div>
+</body>
+</html>
